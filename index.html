@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            border-bottom: 2px solid white;
+            background-image: url('https://i.pinimg.com/originals/90/7b/ca/907bcae13abb65ec8f6ca687b5eeb305.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .header-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 6em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+        h1:hover {
+            color: #ffcc00;
+        }
+        h1 span {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        h1 span:hover {
+            transform: translateY(-5px);
+        }
+        .image-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .details {
+            margin-top: 10px;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .nav-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .nav-button:hover {
+            background-color: #ffcc00;
+        }
+        .about-me {
+            display: flex;
+            align-items: center;
+            margin: 40px 20px;
+        }
+        .about-me img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 150px;
+            height: 150px;
+        }
+        .about-me-content {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            flex-grow: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+        }
+        .about-me-content:hover {
+            transform: translateY(-10px); /* Move up */
+            box-shadow: 0 0 15px white; /* Glow effect */
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+        .project {
+            text-align: center;
+        }
+        .project-image {
+            width: 100%; /* Full width of the container */
+            height: auto; /* Keep aspect ratio */
+            aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+            object-fit: cover; /* Maintain aspect ratio while covering the area */
+            transition: transform 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+        .project-image:hover {
+            transform: scale(1.05);
+        }
+        .project h2 {
+            transition: transform 0.3s ease;
+        }
+        .project h2:hover {
+            transform: translateY(-5px);
+        }
+        .contact {
+            text-align: center;
+            margin: 40px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+        }
+        .hidden-projects {
+            display: none; /* Hidden by default */
+            grid-template-columns: repeat(2, 1fr); /* Ensure a grid layout */
+        }
+        .load-more, .close {
+            display: block; /* Always visible */
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="sh.png" alt="Header Image" class="header-image">
+        <h1>
+            <span>P</span>
+            <span>o</span>
+            <span>r</span>
+            <span>t</span>
+            <span>f</span>
+            <span>o</span>
+            <span>l</span>
+            <span>i</span>
+            <span>o</span>
+        </h1>
+    </header>
+
+    <div class="nav-buttons">
+        <a href="#about-me" class="nav-button">About Me</a>
+        <a href="#projects" class="nav-button">Projects</a>
+        <a href="#contact" class="nav-button">Contact</a>
+    </div>
+
+    <div id="about-me" class="about-me">
+        <img src="PFP.png" alt="Your Profile" />
+        <div class="about-me-content">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Shreeshan Prajapati, a 22-year-old student and a passionate graphics designer. Over the past three years, I've been deeply involved in creating eye-catching thumbnails, with a particular focus on balancing creativity and functionality. Designing has been more than just a skill—it's my way of communicating powerful visuals that capture attention instantly.
+
+                As a thumbnail designer, I take pride in crafting designs that resonate with audiences, tell stories, and enhance engagement. My journey started with a keen interest in music and visual aesthetics, which soon turned into a thriving passion for designing.
+
+                Through countless hours of learning and hands-on projects, I’ve developed a deep understanding of what works visually in the digital world. My designs are not only creative but also carefully tailored to meet the demands of the fast-paced, ever-evolving landscape of online content.
+
+                Beyond design, I’m known for being hardworking and friendly. I thrive on collaboration and enjoy bringing unique ideas to life while maintaining a strong work ethic. I aim to continually grow and adapt in this ever-changing field, ensuring that every project I work on leaves a lasting impression.
+            </p>
+        </div>
+    </div>
+
+    <div style="text-align: center;" id="projects">
+        <h1>PROJECTS</h1>
+        <div class="projects">
+            <!-- First 6 Projects -->
+            <div class="project">
+                <img src="ellon musk jeff.png" alt="Project 1" class="project-image">
+                <h2>Project 1</h2>
+            </div>
+            <div class="project">
+                <img src="formal edu vs self learning.png" alt="Project 2" class="project-image">
+                <h2>Project 2</h2>
+            </div>
+            <div class="project">
+                <img src="theyll never accept you.png" alt="Project 3" class="project-image">
+                <h2>Project 3</h2>
+            </div>
+            <div class="project">
+                <img src="pawn stars.png" alt="Project 4" class="project-image">
+                <h2>Project 4</h2>
+            </div>
+            <div class="project">
+                <img src="rank push.png" alt="Project 5" class="project-image">
+                <h2>Project 5</h2>
+            </div>
+            <div class="project">
+                <img src="skillset vs mindset2.png" alt="Project 6" class="project-image">
+                <h2>Project 6</h2>
+            </div>
+        </div>
+
+        <!-- Hidden Projects -->
+        <div class="hidden-projects">
+            <div class="project">
+                <img src="jumping 2.png" alt="Project 7" class="project-image">
+                <h2>Project 7</h2>
+            </div>
+            <div class="project">
+                <img src="arijit 3.png" alt="Project 8" class="project-image">
+                <h2>Project 8</h2>
+            </div>
+            <div class="project">
+                <img src="twitch secret exposed.png" alt="Project 9" class="project-image">
+                <h2>Project 9</h2>
+            </div>
+            <div class="project">
+                <img src="food review 4.jpg" alt="Project 10" class="project-image">
+                <h2>Project 10</h2>
+            </div>
+           <div class="project">
+                <img src="sonu nigam.png" alt="Project 10" class="project-image">
+                <h2>Project 11</h2>
+            </div>
+            <div class="project">
+                <img src="ronaldo2.png" alt="Project 10" class="project-image">
+                <h2>Project 12</h2>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <button class="load-more" onclick="toggleProjects()">Load More Projects</button>
+        <button class="close" style="display:none;" onclick="toggleProjects()">Close</button>
+    </div>
+
+    <div id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to reach out!</p>
+        <div class="nav-buttons">
+            <a href="mailto:shreeshanprajati9@gmail.com" class="nav-button">Email</a>
+            <a href="https://discordapp.com" class="nav-button">Discord/shreeshan</a>
+            <a href="https://linkedin.com" class="nav-button">LinkedIn/Shreeshan Prajapati</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Shreeshan Prajapati</p>
+    </footer>
+
+    <script>
+        function toggleProjects() {
+            const hiddenProjects = document.querySelector('.hidden-projects');
+            const loadMoreButton = document.querySelector('.load-more');
+            const closeButton = document.querySelector('.close');
+
+            if (hiddenProjects.style.display === 'none' || hiddenProjects.style.display === '') {
+                hiddenProjects.style.display = 'grid'; // Show the hidden projects
+                loadMoreButton.style.display = 'none'; // Hide Load More button
+                closeButton.style.display = 'block'; // Show Close button
+            } else {
+                hiddenProjects.style.display = 'none'; // Hide the hidden projects
+                loadMoreButton.style.display = 'block'; // Show Load More button
+                closeButton.style.display = 'none'; // Hide Close button
+            }
+        }
+    </script>
+</body>
+</html>
